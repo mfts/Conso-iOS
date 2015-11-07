@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,CHTCollectionViewDelegateWaterfallLayout {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -14,6 +15,9 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView.backgroundColor = UIColor(red:0.21, green:0.22, blue:0.26, alpha:1)
+        self.navigationController?.navigationBar.topItem?.title = "Recommendation"
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: ".SFUIText-Medium", size: 18)!,  NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.setupCollectionView()
@@ -72,13 +76,24 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     
     
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize {
-        return CGSize()
+    
+        
+        return  CGSize(width: 35.0, height: 35.0)
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! DealUICollectionViewCell
     
+        cell.nameLabel.text = self.products[indexPath.row].name
+        cell.mainImage.hnk_setImageFromURL(NSURL(string: self.products[indexPath.row].picture)!)
+        if let price = Int(self.products[indexPath.row].price) {
+            let numberFormatter = NSNumberFormatter()
+            numberFormatter.numberStyle = .CurrencyStyle
+            numberFormatter.locale = NSLocale(localeIdentifier: "de_DE")
+            cell.priceLabel.text = numberFormatter.stringFromNumber(price)
+        }
+        
         
         return cell
     }

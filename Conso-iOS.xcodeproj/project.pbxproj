@@ -12,6 +12,8 @@
 		5015BE5B1BEE4CF4009AE417 /* DealUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE5A1BEE4CF4009AE417 /* DealUICollectionViewCell.swift */; };
 		5015BE5D1BEE6D0C009AE417 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE5C1BEE6D0C009AE417 /* Product.swift */; };
 		50D47AF51BEE711D00B7A2EE /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D47AF41BEE711D00B7A2EE /* SwiftyJSON.swift */; };
+		50D47AF81BEE933F00B7A2EE /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D47AEF1BEE70F800B7A2EE /* Haneke.framework */; };
+		50D47AF91BEE933F00B7A2EE /* Haneke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50D47AEF1BEE70F800B7A2EE /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E918F9E61BEE32D900A7E08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918F9E51BEE32D900A7E08B /* AppDelegate.swift */; };
 		E918F9EB1BEE32D900A7E08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E918F9E91BEE32D900A7E08B /* Main.storyboard */; };
 		E918F9ED1BEE32D900A7E08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E918F9EC1BEE32D900A7E08B /* Assets.xcassets */; };
@@ -42,6 +44,13 @@
 			remoteGlobalIDString = A0026E9A19C9BFBC004DE0C6;
 			remoteInfo = HanekeDemo;
 		};
+		50D47AFA1BEE933F00B7A2EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50D47AE81BEE70F800B7A2EE /* Haneke.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A095C9551980418C00CD0F4C;
+			remoteInfo = Haneke;
+		};
 		E918F9F71BEE32D900A7E08B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E918F9DA1BEE32D900A7E08B /* Project object */;
@@ -57,6 +66,20 @@
 			remoteInfo = "Conso-iOS";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50D47AFC1BEE933F00B7A2EE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50D47AF91BEE933F00B7A2EE /* Haneke.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5015BE501BEE3D17009AE417 /* DealsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsVC.swift; sourceTree = "<group>"; };
@@ -86,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D47AF81BEE933F00B7A2EE /* Haneke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,10 +216,12 @@
 				E918F9DE1BEE32D900A7E08B /* Sources */,
 				E918F9DF1BEE32D900A7E08B /* Frameworks */,
 				E918F9E01BEE32D900A7E08B /* Resources */,
+				50D47AFC1BEE933F00B7A2EE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				50D47AFB1BEE933F00B7A2EE /* PBXTargetDependency */,
 			);
 			name = "Conso-iOS";
 			productName = "Conso-iOS";
@@ -371,6 +397,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		50D47AFB1BEE933F00B7A2EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Haneke;
+			targetProxy = 50D47AFA1BEE933F00B7A2EE /* PBXContainerItemProxy */;
+		};
 		E918F9F81BEE32D900A7E08B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E918F9E11BEE32D900A7E08B /* Conso-iOS */;
@@ -489,6 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Conso-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.hackevents.marc.Conso-iOS";
@@ -503,6 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Conso-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.hackevents.marc.Conso-iOS";

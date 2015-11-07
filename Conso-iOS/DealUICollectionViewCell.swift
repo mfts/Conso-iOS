@@ -10,6 +10,11 @@ import UIKit
 
 class DealUICollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var mainImage: UIImageView!
+    @IBOutlet weak var heartButton: UIButton!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var voteImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     
     override func awakeFromNib() {

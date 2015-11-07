@@ -15,6 +15,7 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        self.setupCollectionView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,8 +23,16 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     }
 
     
-    func setupCollectionView() -> Void{
+    func setupCollectionView() -> Void {
+        let layout = CHTCollectionViewWaterfallLayout()
+        layout.minimumColumnSpacing = 1.0
+        layout.minimumInteritemSpacing = 1.0
         
+        self.collectionView.alwaysBounceVertical = true
+        
+        self.collectionView.autoresizingMask = [UIViewAutoresizing.FlexibleHeight,UIViewAutoresizing.FlexibleWidth]
+        
+        self.collectionView.collectionViewLayout = layout
     }
     
     

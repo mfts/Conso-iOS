@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		5015BE511BEE3D17009AE417 /* DealsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE501BEE3D17009AE417 /* DealsVC.swift */; };
 		5015BE561BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE531BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.m */; };
-		5015BE581BEE3FCD009AE417 /* DealUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE571BEE3FCD009AE417 /* DealUICollectionViewCell.swift */; };
+		5015BE5B1BEE4CF4009AE417 /* DealUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE5A1BEE4CF4009AE417 /* DealUICollectionViewCell.swift */; };
+		5015BE5D1BEE6D0C009AE417 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE5C1BEE6D0C009AE417 /* Product.swift */; };
 		E918F9E61BEE32D900A7E08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918F9E51BEE32D900A7E08B /* AppDelegate.swift */; };
 		E918F9EB1BEE32D900A7E08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E918F9E91BEE32D900A7E08B /* Main.storyboard */; };
 		E918F9ED1BEE32D900A7E08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E918F9EC1BEE32D900A7E08B /* Assets.xcassets */; };
@@ -40,7 +41,8 @@
 		5015BE521BEE3DDB009AE417 /* Conso-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Conso-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		5015BE531BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		5015BE541BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
-		5015BE571BEE3FCD009AE417 /* DealUICollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealUICollectionViewCell.swift; sourceTree = "<group>"; };
+		5015BE5A1BEE4CF4009AE417 /* DealUICollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealUICollectionViewCell.swift; sourceTree = "<group>"; };
+		5015BE5C1BEE6D0C009AE417 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		E918F9E21BEE32D900A7E08B /* Conso-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conso-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E918F9E51BEE32D900A7E08B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E918F9EA1BEE32D900A7E08B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,14 +115,15 @@
 			isa = PBXGroup;
 			children = (
 				E918F9E51BEE32D900A7E08B /* AppDelegate.swift */,
-				5015BE571BEE3FCD009AE417 /* DealUICollectionViewCell.swift */,
 				5015BE501BEE3D17009AE417 /* DealsVC.swift */,
-				5015BE591BEE40AB009AE417 /* WaterLayout */,
+				5015BE5A1BEE4CF4009AE417 /* DealUICollectionViewCell.swift */,
+				5015BE5C1BEE6D0C009AE417 /* Product.swift */,
 				E918F9E91BEE32D900A7E08B /* Main.storyboard */,
 				E918F9EC1BEE32D900A7E08B /* Assets.xcassets */,
 				E918F9EE1BEE32D900A7E08B /* LaunchScreen.storyboard */,
 				E918F9F11BEE32D900A7E08B /* Info.plist */,
 				5015BE521BEE3DDB009AE417 /* Conso-iOS-Bridging-Header.h */,
+				5015BE591BEE40AB009AE417 /* WaterLayout */,
 			);
 			path = "Conso-iOS";
 			sourceTree = "<group>";
@@ -274,8 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5015BE581BEE3FCD009AE417 /* DealUICollectionViewCell.swift in Sources */,
+				5015BE5B1BEE4CF4009AE417 /* DealUICollectionViewCell.swift in Sources */,
 				5015BE511BEE3D17009AE417 /* DealsVC.swift in Sources */,
+				5015BE5D1BEE6D0C009AE417 /* Product.swift in Sources */,
 				5015BE561BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				E918F9E61BEE32D900A7E08B /* AppDelegate.swift in Sources */,
 			);

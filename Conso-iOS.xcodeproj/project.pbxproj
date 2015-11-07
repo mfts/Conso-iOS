@@ -11,6 +11,7 @@
 		5015BE561BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE531BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.m */; };
 		5015BE5B1BEE4CF4009AE417 /* DealUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE5A1BEE4CF4009AE417 /* DealUICollectionViewCell.swift */; };
 		5015BE5D1BEE6D0C009AE417 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE5C1BEE6D0C009AE417 /* Product.swift */; };
+		50D47AF51BEE711D00B7A2EE /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D47AF41BEE711D00B7A2EE /* SwiftyJSON.swift */; };
 		E918F9E61BEE32D900A7E08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918F9E51BEE32D900A7E08B /* AppDelegate.swift */; };
 		E918F9EB1BEE32D900A7E08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E918F9E91BEE32D900A7E08B /* Main.storyboard */; };
 		E918F9ED1BEE32D900A7E08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E918F9EC1BEE32D900A7E08B /* Assets.xcassets */; };
@@ -20,6 +21,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		50D47AEE1BEE70F800B7A2EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50D47AE81BEE70F800B7A2EE /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A095C9561980418C00CD0F4C;
+			remoteInfo = Haneke;
+		};
+		50D47AF01BEE70F800B7A2EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50D47AE81BEE70F800B7A2EE /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A095C9611980418C00CD0F4C;
+			remoteInfo = HanekeTests;
+		};
+		50D47AF21BEE70F800B7A2EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50D47AE81BEE70F800B7A2EE /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A0026E9A19C9BFBC004DE0C6;
+			remoteInfo = HanekeDemo;
+		};
 		E918F9F71BEE32D900A7E08B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E918F9DA1BEE32D900A7E08B /* Project object */;
@@ -43,6 +65,8 @@
 		5015BE541BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
 		5015BE5A1BEE4CF4009AE417 /* DealUICollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealUICollectionViewCell.swift; sourceTree = "<group>"; };
 		5015BE5C1BEE6D0C009AE417 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		50D47AE81BEE70F800B7A2EE /* Haneke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Haneke.xcodeproj; path = "../../Downloads/HanekeSwift-master-2/Haneke.xcodeproj"; sourceTree = "<group>"; };
+		50D47AF41BEE711D00B7A2EE /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		E918F9E21BEE32D900A7E08B /* Conso-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conso-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E918F9E51BEE32D900A7E08B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E918F9EA1BEE32D900A7E08B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,9 +115,20 @@
 			name = WaterLayout;
 			sourceTree = "<group>";
 		};
+		50D47AE91BEE70F800B7A2EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50D47AEF1BEE70F800B7A2EE /* Haneke.framework */,
+				50D47AF11BEE70F800B7A2EE /* HanekeTests.xctest */,
+				50D47AF31BEE70F800B7A2EE /* HanekeDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E918F9D91BEE32D900A7E08B = {
 			isa = PBXGroup;
 			children = (
+				50D47AE81BEE70F800B7A2EE /* Haneke.xcodeproj */,
 				E918F9E41BEE32D900A7E08B /* Conso-iOS */,
 				E918F9F91BEE32D900A7E08B /* Conso-iOSTests */,
 				E918FA041BEE32D900A7E08B /* Conso-iOSUITests */,
@@ -115,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				E918F9E51BEE32D900A7E08B /* AppDelegate.swift */,
+				50D47AF41BEE711D00B7A2EE /* SwiftyJSON.swift */,
 				5015BE501BEE3D17009AE417 /* DealsVC.swift */,
 				5015BE5A1BEE4CF4009AE417 /* DealUICollectionViewCell.swift */,
 				5015BE5C1BEE6D0C009AE417 /* Product.swift */,
@@ -236,6 +272,12 @@
 			mainGroup = E918F9D91BEE32D900A7E08B;
 			productRefGroup = E918F9E31BEE32D900A7E08B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 50D47AE91BEE70F800B7A2EE /* Products */;
+					ProjectRef = 50D47AE81BEE70F800B7A2EE /* Haneke.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E918F9E11BEE32D900A7E08B /* Conso-iOS */,
@@ -244,6 +286,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		50D47AEF1BEE70F800B7A2EE /* Haneke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Haneke.framework;
+			remoteRef = 50D47AEE1BEE70F800B7A2EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		50D47AF11BEE70F800B7A2EE /* HanekeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HanekeTests.xctest;
+			remoteRef = 50D47AF01BEE70F800B7A2EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		50D47AF31BEE70F800B7A2EE /* HanekeDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = HanekeDemo.app;
+			remoteRef = 50D47AF21BEE70F800B7A2EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E918F9E01BEE32D900A7E08B /* Resources */ = {
@@ -280,6 +346,7 @@
 				5015BE5B1BEE4CF4009AE417 /* DealUICollectionViewCell.swift in Sources */,
 				5015BE511BEE3D17009AE417 /* DealsVC.swift in Sources */,
 				5015BE5D1BEE6D0C009AE417 /* Product.swift in Sources */,
+				50D47AF51BEE711D00B7A2EE /* SwiftyJSON.swift in Sources */,
 				5015BE561BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				E918F9E61BEE32D900A7E08B /* AppDelegate.swift in Sources */,
 			);

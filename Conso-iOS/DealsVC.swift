@@ -10,18 +10,39 @@ import UIKit
 
 class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,CHTCollectionViewDelegateWaterfallLayout {
     @IBOutlet weak var collectionView: UICollectionView!
-
+    let products : [Product] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.setupCollectionView()
+        self.NetworkStuff()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    func NetworkStuff() -> Void {
+        let urlString = "http://192.168.0.159:3000/api/products"
+        let url = NSMutableURLRequest(URL: NSURL(string: urlString)!)
+        url.timeoutInterval = 20.0
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(url) { (data, response, error) -> Void in
+            if error != nil{
+                print(error?.localizedDescription)
+            }
+            let json = JSON(data: data!)
+            self.parseData(json)
+        }
+        task.resume()
+    }
+    
+    
+    func parseData(json : JSON) -> Void {
+        
+    }
     
     func setupCollectionView() -> Void {
         let layout = CHTCollectionViewWaterfallLayout()
@@ -46,7 +67,7 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return products.count
     }
     
     

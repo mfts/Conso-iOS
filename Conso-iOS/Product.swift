@@ -13,11 +13,13 @@ struct Product {
     var urlItem : String
     var picture : String
     var deal : Bool
+    var price : String
     
-    init(name : String,urlItem : String,picture : String,deal : Bool){
+    init(name : String,urlItem : String,picture : String,deal : Bool,price : String){
         self.name = name
         self.urlItem = urlItem
         self.picture = picture
         self.deal = deal
+        self.price = price
     }
 }

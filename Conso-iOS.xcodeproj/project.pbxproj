@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5015BE511BEE3D17009AE417 /* DealsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE501BEE3D17009AE417 /* DealsVC.swift */; };
+		5015BE561BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE531BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.m */; };
+		5015BE581BEE3FCD009AE417 /* DealUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015BE571BEE3FCD009AE417 /* DealUICollectionViewCell.swift */; };
 		E918F9E61BEE32D900A7E08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918F9E51BEE32D900A7E08B /* AppDelegate.swift */; };
-		E918F9E81BEE32D900A7E08B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918F9E71BEE32D900A7E08B /* ViewController.swift */; };
 		E918F9EB1BEE32D900A7E08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E918F9E91BEE32D900A7E08B /* Main.storyboard */; };
 		E918F9ED1BEE32D900A7E08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E918F9EC1BEE32D900A7E08B /* Assets.xcassets */; };
 		E918F9F01BEE32D900A7E08B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E918F9EE1BEE32D900A7E08B /* LaunchScreen.storyboard */; };
@@ -34,9 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5015BE501BEE3D17009AE417 /* DealsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsVC.swift; sourceTree = "<group>"; };
+		5015BE521BEE3DDB009AE417 /* Conso-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Conso-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		5015BE531BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
+		5015BE541BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		5015BE571BEE3FCD009AE417 /* DealUICollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealUICollectionViewCell.swift; sourceTree = "<group>"; };
 		E918F9E21BEE32D900A7E08B /* Conso-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conso-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E918F9E51BEE32D900A7E08B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E918F9E71BEE32D900A7E08B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E918F9EA1BEE32D900A7E08B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E918F9EC1BEE32D900A7E08B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E918F9EF1BEE32D900A7E08B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5015BE591BEE40AB009AE417 /* WaterLayout */ = {
+			isa = PBXGroup;
+			children = (
+				5015BE531BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.m */,
+				5015BE541BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.h */,
+			);
+			name = WaterLayout;
+			sourceTree = "<group>";
+		};
 		E918F9D91BEE32D900A7E08B = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +113,14 @@
 			isa = PBXGroup;
 			children = (
 				E918F9E51BEE32D900A7E08B /* AppDelegate.swift */,
-				E918F9E71BEE32D900A7E08B /* ViewController.swift */,
+				5015BE571BEE3FCD009AE417 /* DealUICollectionViewCell.swift */,
+				5015BE501BEE3D17009AE417 /* DealsVC.swift */,
+				5015BE591BEE40AB009AE417 /* WaterLayout */,
 				E918F9E91BEE32D900A7E08B /* Main.storyboard */,
 				E918F9EC1BEE32D900A7E08B /* Assets.xcassets */,
 				E918F9EE1BEE32D900A7E08B /* LaunchScreen.storyboard */,
 				E918F9F11BEE32D900A7E08B /* Info.plist */,
+				5015BE521BEE3DDB009AE417 /* Conso-iOS-Bridging-Header.h */,
 			);
 			path = "Conso-iOS";
 			sourceTree = "<group>";
@@ -256,7 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E918F9E81BEE32D900A7E08B /* ViewController.swift in Sources */,
+				5015BE581BEE3FCD009AE417 /* DealUICollectionViewCell.swift in Sources */,
+				5015BE511BEE3D17009AE417 /* DealsVC.swift in Sources */,
+				5015BE561BEE3DDC009AE417 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				E918F9E61BEE32D900A7E08B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,10 +417,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Conso-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.hackevents.marc.Conso-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Conso-iOS/Conso-iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -408,10 +431,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Conso-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.hackevents.marc.Conso-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Conso-iOS/Conso-iOS-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -482,6 +507,7 @@
 				E918FA0C1BEE32D900A7E08B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E918FA0D1BEE32D900A7E08B /* Build configuration list for PBXNativeTarget "Conso-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +516,7 @@
 				E918FA0F1BEE32D900A7E08B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E918FA101BEE32D900A7E08B /* Build configuration list for PBXNativeTarget "Conso-iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +525,7 @@
 				E918FA121BEE32D900A7E08B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

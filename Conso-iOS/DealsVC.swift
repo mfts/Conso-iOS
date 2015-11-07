@@ -10,7 +10,7 @@ import UIKit
 
 class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,CHTCollectionViewDelegateWaterfallLayout {
     @IBOutlet weak var collectionView: UICollectionView!
-    let products : [Product] = []
+    var products : [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,20 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     
     
     func parseData(json : JSON) -> Void {
-        
+        for (_,value) in json["products"]{
+            let name = value["shop"]["name"].stringValue
+            let urlItem = value["url"].stringValue
+            let picture = value["photo_url"].stringValue
+            let deal = value["offer"].boolValue
+            let price = value["price_in_cent"].stringValue
+            
+            let product = Product(name: name, urlItem: urlItem, picture: picture, deal: deal, price: price)
+            print(product)
+            self.products.append(product)
+            dispatch_async(dispatch_get_main_queue()){
+                self.collectionView.reloadData()
+            }
+        }
     }
     
     func setupCollectionView() -> Void {
@@ -63,7 +76,11 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! DealUICollectionViewCell
+    
+        
+        return cell
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

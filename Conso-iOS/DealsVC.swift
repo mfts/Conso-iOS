@@ -17,7 +17,6 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.hidesBarsOnSwipe = true
         self.collectionView.backgroundColor = UIColor(red:0.21, green:0.22, blue:0.26, alpha:1)
         self.navigationController?.navigationBar.topItem?.title = "Recommendation"
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: ".SFUIText-Medium", size: 18)!,  NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -35,6 +34,15 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
         let urlString = "http://consoweb.eu-gb.mybluemix.net/api/products"
         let url = NSMutableURLRequest(URL: NSURL(string: urlString)!)
         url.timeoutInterval = 20.0
+        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.navigationController?.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.CustomView
+        let view = NVActivityIndicatorView(frame: CGRect(x: loadingNotification.frame.origin.x, y: loadingNotification.frame.origin.y, width: 20, height: 20))
+        loadingNotification.labelText = nil
+        loadingNotification.detailsLabelText = nil
+        loadingNotification.userInteractionEnabled = false
+        loadingNotification.customView = view
+        view.startAnimation()
+        self.navigationController?.view.addSubview(loadingNotification)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(url) { (data, response, error) -> Void in
             if error != nil{
@@ -56,7 +64,6 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
             let price = value["price_in_cent"].stringValue
             
             let product = Product(name: name, urlItem: urlItem, picture: picture, deal: deal, price: price)
-            print(product)
             self.products.append(product)
             dispatch_async(dispatch_get_main_queue()){
                 self.collectionView.reloadData()
@@ -84,7 +91,7 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     
     
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize {
-        return  CGSize(width: 35.0, height: 35.0)
+        return  CGSize(width: 45.0, height: 45.0)
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

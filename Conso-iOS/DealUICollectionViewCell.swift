@@ -18,7 +18,7 @@ class DealUICollectionViewCell: UICollectionViewCell {
     
     
     override func awakeFromNib() {
-        super.awakeFromNib()
+        super.awakeFromNib()    
     }
     
     

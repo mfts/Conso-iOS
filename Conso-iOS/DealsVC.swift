@@ -50,6 +50,9 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
             }
             let json = JSON(data: data!)
             self.parseData(json)
+            dispatch_async(dispatch_get_main_queue()){
+                MBProgressHUD.hideAllHUDsForView(self.navigationController?.view, animated: true)
+            }
         }
         task.resume()
     }

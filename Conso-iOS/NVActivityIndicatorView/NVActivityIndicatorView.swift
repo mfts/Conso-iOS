@@ -104,7 +104,7 @@ public enum NVActivityIndicatorType {
 }
 
 public class NVActivityIndicatorView: UIView {
-    private static let DEFAULT_TYPE: NVActivityIndicatorType = .Pacman
+    private static let DEFAULT_TYPE: NVActivityIndicatorType = .BallPulse
     private static let DEFAULT_COLOR = UIColor.whiteColor()
     private static let DEFAULT_SIZE: CGSize = CGSize(width: 40, height: 40)
     

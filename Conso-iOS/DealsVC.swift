@@ -11,6 +11,7 @@ import Haneke
 
 class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,CHTCollectionViewDelegateWaterfallLayout {
     @IBOutlet weak var collectionView: UICollectionView!
+  
     var products : [Product] = []
     
     override func viewDidLoad() {
@@ -29,7 +30,7 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     }
 
     func NetworkStuff() -> Void {
-        let urlString = "http://192.168.0.159:3000/api/products"
+        let urlString = "http://consoweb.eu-gb.mybluemix.net/api/products"
         let url = NSMutableURLRequest(URL: NSURL(string: urlString)!)
         url.timeoutInterval = 20.0
         let session = NSURLSession.sharedSession()
@@ -63,8 +64,8 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     
     func setupCollectionView() -> Void {
         let layout = CHTCollectionViewWaterfallLayout()
-        layout.minimumColumnSpacing = 1.0
-        layout.minimumInteritemSpacing = 1.0
+        layout.minimumColumnSpacing = 0.0
+        layout.minimumInteritemSpacing = 0.0
         
         self.collectionView.alwaysBounceVertical = true
         
@@ -73,6 +74,11 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
         self.collectionView.collectionViewLayout = layout
     }
     
+    
+
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+    }
     
     
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize {
@@ -94,6 +100,17 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
             cell.priceLabel.text = numberFormatter.stringFromNumber(price)
         }
         
+        if self.products[indexPath.row].deal {
+            cell.voteImage.image = UIImage(named: "down")
+        }else{
+            cell.voteImage.image = UIImage(named: "up")
+        }
+        
+        if self.products[indexPath.row].deal {
+            cell.heartButton.imageView?.image = UIImage(named: "heartunFill")
+        }else{
+            cell.heartButton.imageView?.image = UIImage(named: "heartFill")
+        }
         
         return cell
     }

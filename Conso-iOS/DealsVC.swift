@@ -8,14 +8,16 @@
 
 import UIKit
 import Haneke
+import SafariServices
 
-class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,CHTCollectionViewDelegateWaterfallLayout {
+class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,CHTCollectionViewDelegateWaterfallLayout,SFSafariViewControllerDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
   
     var products : [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.hidesBarsOnSwipe = true
         self.collectionView.backgroundColor = UIColor(red:0.21, green:0.22, blue:0.26, alpha:1)
         self.navigationController?.navigationBar.topItem?.title = "Recommendation"
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: ".SFUIText-Medium", size: 18)!,  NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -77,13 +79,11 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
+        self.openSafariVC(self.products[indexPath.row].urlItem)
     }
     
     
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize {
-    
-        
         return  CGSize(width: 35.0, height: 35.0)
     }
     
@@ -97,8 +97,9 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
             let numberFormatter = NSNumberFormatter()
             numberFormatter.numberStyle = .CurrencyStyle
             numberFormatter.locale = NSLocale(localeIdentifier: "de_DE")
-            cell.priceLabel.text = numberFormatter.stringFromNumber(price)
+            cell.priceLabel.text = numberFormatter.stringFromNumber(Double(price) / 100.0)
         }
+        
         
         if self.products[indexPath.row].deal {
             cell.voteImage.image = UIImage(named: "down")
@@ -119,5 +120,16 @@ class DealsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
         return products.count
     }
     
+    func openSafariVC(urlString : String) -> Void {
+        let svc = SFSafariViewController(URL: NSURL(string: urlString)!)
+        svc.delegate = self
+        self.presentViewController(svc, animated: true, completion: nil)
+        
+    }
+    
+    func safariViewControllerDidFinish(controller: SFSafariViewController)
+    {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
     
 }

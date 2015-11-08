@@ -23,4 +23,15 @@ class DealUICollectionViewCell: UICollectionViewCell {
     
     
     
+    @IBAction func heartPressed(sender: AnyObject) {
+        if self.heartButton.imageView?.image == UIImage(named: "heartunFill"){
+           self.heartButton.imageView?.image = UIImage(named: "heartFill")
+        }
+        
+        if self.heartButton.imageView?.image == UIImage(named: "heartFill") {
+            self.heartButton.imageView?.image = UIImage(named: "heartunFill")
+        }
+    }
+    
+    
 }

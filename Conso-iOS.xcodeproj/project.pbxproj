@@ -45,6 +45,7 @@
 		5082842B1BEF3B8B00710B5E /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508284091BEF3B8B00710B5E /* NVActivityIndicatorAnimationDelegate.swift */; };
 		5082842C1BEF3B8B00710B5E /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082840A1BEF3B8B00710B5E /* NVActivityIndicatorShape.swift */; };
 		5082842D1BEF3B8B00710B5E /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082840C1BEF3B8B00710B5E /* NVActivityIndicatorView.swift */; };
+		5082842F1BEF450E00710B5E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082842E1BEF450E00710B5E /* LoginVC.swift */; };
 		50D47AF51BEE711D00B7A2EE /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D47AF41BEE711D00B7A2EE /* SwiftyJSON.swift */; };
 		50D47AF81BEE933F00B7A2EE /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D47AEF1BEE70F800B7A2EE /* Haneke.framework */; };
 		50D47AF91BEE933F00B7A2EE /* Haneke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50D47AEF1BEE70F800B7A2EE /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -158,6 +159,7 @@
 		5082840A1BEF3B8B00710B5E /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
 		5082840B1BEF3B8B00710B5E /* NVActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVActivityIndicatorView.h; sourceTree = "<group>"; };
 		5082840C1BEF3B8B00710B5E /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorView.swift; sourceTree = "<group>"; };
+		5082842E1BEF450E00710B5E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		50D47AE81BEE70F800B7A2EE /* Haneke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Haneke.xcodeproj; path = "../../Downloads/HanekeSwift-master-2/Haneke.xcodeproj"; sourceTree = "<group>"; };
 		50D47AF41BEE711D00B7A2EE /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		E918F9E21BEE32D900A7E08B /* Conso-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conso-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,6 +308,7 @@
 				E918F9E51BEE32D900A7E08B /* AppDelegate.swift */,
 				50D47AF41BEE711D00B7A2EE /* SwiftyJSON.swift */,
 				5015BE501BEE3D17009AE417 /* DealsVC.swift */,
+				5082842E1BEF450E00710B5E /* LoginVC.swift */,
 				5015BE5A1BEE4CF4009AE417 /* DealUICollectionViewCell.swift */,
 				5015BE5C1BEE6D0C009AE417 /* Product.swift */,
 				E918F9E91BEE32D900A7E08B /* Main.storyboard */,
@@ -540,6 +543,7 @@
 				508284261BEF3B8B00710B5E /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				5082841F1BEF3B8B00710B5E /* NVActivityIndicatorAnimationBlank.swift in Sources */,
 				508284101BEF3B8B00710B5E /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
+				5082842F1BEF450E00710B5E /* LoginVC.swift in Sources */,
 				508284271BEF3B8B00710B5E /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				E918F9E61BEE32D900A7E08B /* AppDelegate.swift in Sources */,
 				508284171BEF3B8B00710B5E /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
